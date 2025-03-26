@@ -26,16 +26,14 @@ Follow these steps to get the project running on your local machine:
 1.  **Clone the Repository:**
     Open your terminal or command prompt and run:
     ```bash
-    git clone <your-github-repository-url>
+    git clone https://github.com/C-Vac/nextjs-flashcards
     ```
-    (Replace `<your-github-repository-url>` with the actual URL of your GitHub repository).
 
 2.  **Navigate to Project Directory:**
     Change into the newly cloned folder:
     ```bash
-    cd <repository-folder-name>
+    cd nextjs-flashcards
     ```
-    (The folder name is usually the same as the repository name).
 
 3.  **Install Dependencies:**
     Install the necessary Node.js packages using npm or yarn:
@@ -67,7 +65,7 @@ Follow these steps to get the project running on your local machine:
 3.  **Uploading Your Deck (e.g., ML Concepts):**
     *   Go to the "Manage Decks" tab.
     *   Click "Choose JSON File...".
-    *   Select the JSON file containing your flashcards (like the `ml_concepts.json` file we created).
+    *   Select the JSON file containing your flashcards (from the `decks` folder).
     *   The deck will be uploaded, added to the list, and automatically selected for studying.
 4.  **Managing Decks:**
     *   In "Manage Decks", you can see all uploaded decks.
