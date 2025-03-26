@@ -1,0 +1,531 @@
+[
+    {
+        "front": "What is the core idea of Supervised Learning?",
+        "back": "To learn a mapping to predict an output Y given an input X.",
+        "tags": [
+            "Supervised Learning",
+            "Core Concept"
+        ]
+    },
+    {
+        "front": "What is Regression in Supervised Learning?",
+        "back": "Predicting a continuous output Y (e.g., house price).",
+        "tags": [
+            "Supervised Learning",
+            "Regression"
+        ]
+    },
+    {
+        "front": "What is Classification in Supervised Learning?",
+        "back": "Predicting a discrete output Y / class label (e.g., spam or not spam).",
+        "tags": [
+            "Supervised Learning",
+            "Classification"
+        ]
+    },
+    {
+        "front": "What is the hypothesis in Linear Regression?",
+        "back": "Predicting Y using a linear combination of input features (effectively a straight line in simple cases).",
+        "tags": [
+            "Linear Regression",
+            "Hypothesis"
+        ]
+    },
+    {
+        "front": "What needs to be learned in Linear Regression?",
+        "back": "The parameters (weights or coefficients) of the linear model.",
+        "tags": [
+            "Linear Regression",
+            "Training",
+            "Parameters"
+        ]
+    },
+    {
+        "front": "What is a common Cost Function for Linear Regression?",
+        "back": "Mean Squared Error (MSE), measuring the average squared difference between predicted and actual values.",
+        "tags": [
+            "Linear Regression",
+            "Cost Function",
+            "MSE"
+        ]
+    },
+    {
+        "front": "How are optimal weights typically found in Linear Regression?",
+        "back": "Using optimization algorithms like Gradient Descent to minimize the cost function.",
+        "tags": [
+            "Linear Regression",
+            "Optimization",
+            "Gradient Descent"
+        ]
+    },
+    {
+        "front": "What is the Normal Equation in Linear Regression?",
+        "back": "An analytical solution to find optimal weights directly. Fast for small datasets, but computationally expensive for large ones.",
+        "tags": [
+            "Linear Regression",
+            "Optimization",
+            "Normal Equation"
+        ]
+    },
+    {
+        "front": "Why is standard Linear Regression not ideal for classification?",
+        "back": "Its output is unbounded and not easily interpretable as probabilities (0 to 1) required for classification.",
+        "tags": [
+            "Linear Regression",
+            "Classification",
+            "Limitations"
+        ]
+    },
+    {
+        "front": "What is the main goal of Logistic Regression?",
+        "back": "To predict the probability (between 0 and 1) of an instance belonging to a particular class.",
+        "tags": [
+            "Logistic Regression",
+            "Classification",
+            "Probability"
+        ]
+    },
+    {
+        "front": "What function does Logistic Regression use to output probabilities?",
+        "back": "The Sigmoid (or Logistic) function, mapping any real value to the range (0, 1).",
+        "tags": [
+            "Logistic Regression",
+            "Sigmoid Function"
+        ]
+    },
+    {
+        "front": "How is Logistic Regression typically trained?",
+        "back": "By maximizing the likelihood of the observed data (Maximum Likelihood Estimation), often using Gradient Ascent.",
+        "tags": [
+            "Logistic Regression",
+            "Training",
+            "Optimization",
+            "Maximum Likelihood"
+        ]
+    },
+    {
+        "front": "How does Logistic Regression handle multi-class classification?",
+        "back": "Using the Softmax function, which outputs a probability distribution over multiple classes.",
+        "tags": [
+            "Logistic Regression",
+            "Classification",
+            "Multi-class",
+            "Softmax"
+        ]
+    },
+    {
+        "front": "What kind of problems are Support Vector Machines (SVMs) particularly useful for?",
+        "back": "Classification tasks, especially those with high dimensionality or non-linear decision boundaries (using the kernel trick).",
+        "tags": [
+            "SVM",
+            "Classification"
+        ]
+    },
+    {
+        "front": "What is the Kernel Trick in SVMs?",
+        "back": "A technique allowing SVMs to implicitly map data to higher dimensions to find a linear separator, effectively creating non-linear boundaries in the original space.",
+        "tags": [
+            "SVM",
+            "Kernel Trick",
+            "Non-linear"
+        ]
+    },
+    {
+        "front": "What is the objective of an SVM during training?",
+        "back": "To find the hyperplane that maximizes the margin (the distance) between the closest points (support vectors) of different classes.",
+        "tags": [
+            "SVM",
+            "Training",
+            "Margin Maximization"
+        ]
+    },
+    {
+        "front": "What is the role of the Regularization parameter (C) in SVMs?",
+        "back": "It controls the trade-off between maximizing the margin and minimizing the classification errors on the training data. A smaller C allows more errors (softer margin).",
+        "tags": [
+            "SVM",
+            "Regularization",
+            "Hyperparameter"
+        ]
+    },
+    {
+        "front": "What is a Confusion Matrix used for?",
+        "back": "Visualizing the performance of a classification model by showing counts of True Positives, True Negatives, False Positives, and False Negatives.",
+        "tags": [
+            "Model Evaluation",
+            "Classification",
+            "Confusion Matrix"
+        ]
+    },
+    {
+        "front": "Define TP, TN, FP, FN in a Confusion Matrix.",
+        "back": "TP: True Positive (Correctly predicted Positive). TN: True Negative (Correctly predicted Negative). FP: False Positive (Incorrectly predicted Positive - Type I Error). FN: False Negative (Incorrectly predicted Negative - Type II Error).",
+        "tags": [
+            "Model Evaluation",
+            "Classification",
+            "Confusion Matrix",
+            "Metrics"
+        ]
+    },
+    {
+        "front": "What is Accuracy in classification evaluation?",
+        "back": "The proportion of total predictions that were correct. (TP + TN) / (Total Predictions). Can be misleading with imbalanced classes.",
+        "tags": [
+            "Model Evaluation",
+            "Classification",
+            "Metrics",
+            "Accuracy"
+        ]
+    },
+    {
+        "front": "What is Precision in classification evaluation?",
+        "back": "Of all instances predicted as Positive, what proportion were actually Positive? TP / (TP + FP). Measures exactness.",
+        "tags": [
+            "Model Evaluation",
+            "Classification",
+            "Metrics",
+            "Precision"
+        ]
+    },
+    {
+        "front": "What is Recall (Sensitivity) in classification evaluation?",
+        "back": "Of all actual Positive instances, what proportion were correctly predicted as Positive? TP / (TP + FN). Measures completeness.",
+        "tags": [
+            "Model Evaluation",
+            "Classification",
+            "Metrics",
+            "Recall",
+            "Sensitivity"
+        ]
+    },
+    {
+        "front": "What is the F1 Score?",
+        "back": "The harmonic mean of Precision and Recall (2 * (Precision * Recall) / (Precision + Recall)). Useful for balancing Precision and Recall, especially with imbalanced classes.",
+        "tags": [
+            "Model Evaluation",
+            "Classification",
+            "Metrics",
+            "F1 Score"
+        ]
+    },
+    {
+        "front": "Name common Regression evaluation metrics.",
+        "back": "Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), R-squared (Coefficient of Determination).",
+        "tags": [
+            "Model Evaluation",
+            "Regression",
+            "Metrics"
+        ]
+    },
+    {
+        "front": "What is a potential issue with R-squared (R2)?",
+        "back": "It can be artificially high or misleading if the model is overfit to the training data.",
+        "tags": [
+            "Model Evaluation",
+            "Regression",
+            "Metrics",
+            "R-squared",
+            "Overfitting"
+        ]
+    },
+    {
+        "front": "What is a Multi-Layer Perceptron (MLP)?",
+        "back": "A type of feedforward artificial neural network with one or more hidden layers between the input and output layers.",
+        "tags": [
+            "Neural Networks",
+            "MLP",
+            "Deep Learning"
+        ]
+    },
+    {
+        "front": "What algorithm is commonly used to train MLPs and other deep neural networks?",
+        "back": "Backpropagation, which calculates the gradient of the loss function with respect to the network's weights, allowing for weight updates via gradient descent.",
+        "tags": [
+            "Neural Networks",
+            "MLP",
+            "Deep Learning",
+            "Training",
+            "Backpropagation"
+        ]
+    },
+    {
+        "front": "What kind of problems can MLPs learn?",
+        "back": "They are universal approximators, capable of learning complex, non-linear relationships in data.",
+        "tags": [
+            "Neural Networks",
+            "MLP",
+            "Deep Learning",
+            "Capabilities"
+        ]
+    },
+    {
+        "front": "What type of data are Convolutional Neural Networks (CNNs) particularly well-suited for?",
+        "back": "Grid-like data, especially images, due to their ability to capture spatial hierarchies.",
+        "tags": [
+            "Neural Networks",
+            "CNN",
+            "Deep Learning",
+            "Computer Vision"
+        ]
+    },
+    {
+        "front": "What is the role of Convolution Layers in a CNN?",
+        "back": "To apply filters (kernels) across the input data to detect features like edges, textures, and patterns.",
+        "tags": [
+            "Neural Networks",
+            "CNN",
+            "Deep Learning",
+            "Convolution Layer"
+        ]
+    },
+    {
+        "front": "What is the purpose of Pooling Layers in a CNN?",
+        "back": "To reduce the spatial dimensions (downsampling) of the feature maps, making the representation more robust to variations and reducing computation.",
+        "tags": [
+            "Neural Networks",
+            "CNN",
+            "Deep Learning",
+            "Pooling Layer"
+        ]
+    },
+    {
+        "front": "What is the typical role of Fully Connected Layers at the end of a CNN?",
+        "back": "To perform classification or regression based on the high-level features extracted by the convolutional and pooling layers.",
+        "tags": [
+            "Neural Networks",
+            "CNN",
+            "Deep Learning",
+            "Fully Connected Layer"
+        ]
+    },
+    {
+        "front": "What is Object Detection in Computer Vision?",
+        "back": "Identifying the location (bounding box) and class of objects within an image. Examples: R-CNN, YOLO.",
+        "tags": [
+            "Neural Networks",
+            "CNN",
+            "Computer Vision",
+            "Object Detection"
+        ]
+    },
+    {
+        "front": "What is Semantic Segmentation in Computer Vision?",
+        "back": "Classifying each pixel in an image with a corresponding class label. Example: Fully Convolutional Networks (FCN).",
+        "tags": [
+            "Neural Networks",
+            "CNN",
+            "Computer Vision",
+            "Semantic Segmentation"
+        ]
+    },
+    {
+        "front": "What is Transfer Learning?",
+        "back": "Reusing a pre-trained model (often trained on a large dataset) as the starting point for a new, related task.",
+        "tags": [
+            "Deep Learning",
+            "Transfer Learning",
+            "Training"
+        ]
+    },
+    {
+        "front": "What is Fine-Tuning in the context of Transfer Learning?",
+        "back": "Taking a pre-trained model and further training some or all of its layers on the new dataset specific to the target task.",
+        "tags": [
+            "Deep Learning",
+            "Transfer Learning",
+            "Fine-Tuning",
+            "Training"
+        ]
+    },
+    {
+        "front": "Why is Data Analysis and Preparation important in Machine Learning?",
+        "back": "Machine learning models perform best with clean, well-structured data. Garbage in, garbage out.",
+        "tags": [
+            "Data Preparation",
+            "Preprocessing",
+            "Data Analysis"
+        ]
+    },
+    {
+        "front": "What are common ways to handle Missing Data?",
+        "back": "Deletion (remove rows/columns), Imputation (fill with mean, median, mode, or using a model), or using algorithms robust to missing values.",
+        "tags": [
+            "Data Preparation",
+            "Preprocessing",
+            "Missing Data"
+        ]
+    },
+    {
+        "front": "How might Outliers (anomalous data points) be managed?",
+        "back": "Detection (visualization, statistical methods), Removal, Transformation (e.g., log transform), or using robust models.",
+        "tags": [
+            "Data Preparation",
+            "Preprocessing",
+            "Outliers",
+            "Data Analysis"
+        ]
+    },
+    {
+        "front": "Why might you need to Balance Classes in a classification dataset?",
+        "back": "If one class has significantly fewer instances than others (imbalanced), models might become biased towards the majority class. Techniques include oversampling, undersampling, or using appropriate metrics (like F1).",
+        "tags": [
+            "Data Preparation",
+            "Preprocessing",
+            "Classification",
+            "Class Imbalance"
+        ]
+    },
+    {
+        "front": "What is Data Augmentation?",
+        "back": "Artificially increasing the size and diversity of the training dataset by creating modified copies of existing data (e.g., rotating/flipping images, adding noise).",
+        "tags": [
+            "Data Preparation",
+            "Preprocessing",
+            "Data Augmentation"
+        ]
+    },
+    {
+        "front": "What characterizes Time Series data?",
+        "back": "A sequence of data points indexed in time order.",
+        "tags": [
+            "Time Series",
+            "Data Types"
+        ]
+    },
+    {
+        "front": "What are the typical components decomposed from a Time Series?",
+        "back": "Trend (long-term direction), Seasonality (periodic fluctuations), and Noise/Residual (random variations).",
+        "tags": [
+            "Time Series",
+            "Data Analysis",
+            "Decomposition"
+        ]
+    },
+    {
+        "front": "What are ACF and PACF plots used for in Time Series analysis?",
+        "back": "Autocorrelation Function (ACF) and Partial Autocorrelation Function (PACF) help identify the order (p, q) of ARMA/ARIMA models by showing correlations at different lags.",
+        "tags": [
+            "Time Series",
+            "Data Analysis",
+            "ACF",
+            "PACF",
+            "Model Selection"
+        ]
+    },
+    {
+        "front": "Name some traditional Time Series forecasting models.",
+        "back": "ARMA (Autoregressive Moving Average), ARIMA (Autoregressive Integrated Moving Average), SARIMAX (Seasonal ARIMA with Exogenous variables).",
+        "tags": [
+            "Time Series",
+            "Forecasting",
+            "Models",
+            "ARIMA"
+        ]
+    },
+    {
+        "front": "Name some Deep Learning models used for Time Series analysis.",
+        "back": "Recurrent Neural Networks (RNNs), Long Short-Term Memory (LSTMs), Gated Recurrent Units (GRUs).",
+        "tags": [
+            "Time Series",
+            "Forecasting",
+            "Models",
+            "Deep Learning",
+            "RNN",
+            "LSTM",
+            "GRU"
+        ]
+    },
+    {
+        "front": "How does a Decision Tree make predictions?",
+        "back": "By learning a sequence of if/else questions about features, creating a tree-like structure that leads to a prediction at the leaves.",
+        "tags": [
+            "Decision Trees",
+            "Classification",
+            "Regression",
+            "Models"
+        ]
+    },
+    {
+        "front": "What criteria are used to choose the best split in a Decision Tree?",
+        "back": "Metrics like Gini Impurity or Information Gain (Entropy) are used to find the feature and threshold that best separates the data into distinct classes or reduces variance.",
+        "tags": [
+            "Decision Trees",
+            "Training",
+            "Splitting Criteria",
+            "Gini",
+            "Entropy"
+        ]
+    },
+    {
+        "front": "What is a major risk when training Decision Trees?",
+        "back": "Overfitting: The tree can become too complex and learn the training data noise, leading to poor generalization on new data. Pruning or limiting depth helps.",
+        "tags": [
+            "Decision Trees",
+            "Overfitting",
+            "Regularization"
+        ]
+    },
+    {
+        "front": "What is the main idea behind Ensemble Learning?",
+        "back": "Combining the predictions of multiple individual models (weak learners) to create a more robust and accurate final prediction (strong learner).",
+        "tags": [
+            "Ensemble Learning",
+            "Core Concept"
+        ]
+    },
+    {
+        "front": "What is Bagging (Bootstrap Aggregating)?",
+        "back": "An ensemble technique where multiple models are trained independently on different bootstrap samples (random samples with replacement) of the data. Predictions are often averaged or voted.",
+        "tags": [
+            "Ensemble Learning",
+            "Bagging"
+        ]
+    },
+    {
+        "front": "What is a Random Forest?",
+        "back": "An ensemble method based on Bagging, specifically using Decision Trees as base learners, and adding randomness by considering only a subset of features at each split.",
+        "tags": [
+            "Ensemble Learning",
+            "Bagging",
+            "Random Forest",
+            "Decision Trees"
+        ]
+    },
+    {
+        "front": "What is Boosting?",
+        "back": "An ensemble technique where models are trained sequentially, with each new model focusing on correcting the errors made by the previous ones.",
+        "tags": [
+            "Ensemble Learning",
+            "Boosting"
+        ]
+    },
+    {
+        "front": "Name popular Boosting algorithms.",
+        "back": "AdaBoost (Adaptive Boosting), Gradient Boosting Machines (GBM), XGBoost, LightGBM, CatBoost.",
+        "tags": [
+            "Ensemble Learning",
+            "Boosting",
+            "AdaBoost",
+            "Gradient Boosting"
+        ]
+    },
+    {
+        "front": "What is the purpose of Principal Component Analysis (PCA)?",
+        "back": "Dimensionality reduction: To transform data into a lower-dimensional space while retaining as much of the original variance (important information) as possible.",
+        "tags": [
+            "Dimensionality Reduction",
+            "PCA",
+            "Unsupervised Learning"
+        ]
+    },
+    {
+        "front": "How does PCA achieve dimensionality reduction?",
+        "back": "By finding the principal components, which are orthogonal directions (vectors) in the feature space along which the data varies the most. It projects the data onto these components.",
+        "tags": [
+            "Dimensionality Reduction",
+            "PCA",
+            "Unsupervised Learning",
+            "Principal Components"
+        ]
+    }
+]
