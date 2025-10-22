@@ -1,0 +1,204 @@
+[
+    {
+        "front": "What is the `ping` command?",
+        "back": "A simple networking utility used to troubleshoot network issues, primarily network connectivity.",
+        "tags": [
+            "ping",
+            "networking",
+            "utility"
+        ]
+    },
+    {
+        "front": "What are the main uses of the `ping` command? (3 uses in all)",
+        "back": "1. Test network connectivity (to LAN or internet). 2. Test if a network interface card (NIC) is working. 3. Test DNS name resolution issues.",
+        "tags": [
+            "ping",
+            "troubleshooting",
+            "connectivity",
+            "dns"
+        ]
+    },
+    {
+        "front": "How does the `ping` command work?",
+        "back": "It sends four data packets (echo requests) to a specified IP address or hostname and waits for a response (echo reply) from the destination.",
+        "tags": [
+            "ping",
+            "packets",
+            "echo request",
+            "echo reply"
+        ]
+    },
+    {
+        "front": "What does a successful `ping` reply indicate?",
+        "back": "It indicates that there is network connectivity between the source computer and the destination host/server.",
+        "tags": [
+            "ping",
+            "connectivity",
+            "troubleshooting"
+        ]
+    },
+    {
+        "front": "What does the message \"Request timed out\" mean when using `ping`?",
+        "back": "It means the destination server did not reply, indicating no network connectivity. This could be due to the server being powered down, a firewall is blocking the request, or there's a network path issue.",
+        "tags": [
+            "ping",
+            "error",
+            "request timed out",
+            "troubleshooting"
+        ]
+    },
+    {
+        "front": "What is \"packet loss\" in the context of `ping`?",
+        "back": "When not all of the data packets sent by the `ping` command receive a reply. For example, sending four packets but only receiving two replies results in a 50% packet loss.",
+        "tags": [
+            "ping",
+            "packet loss",
+            "troubleshooting"
+        ]
+    },
+    {
+        "front": "What are some common causes of packet loss?",
+        "back": "Network congestion (heavy traffic) and faulty hardware (bad cables, network cards, modem, etc.).",
+        "tags": [
+            "packet loss",
+            "network congestion",
+            "faulty hardware"
+        ]
+    },
+    {
+        "front": "What does the `ping` message \"Destination host unreachable\" signify?",
+        "back": "It means a route to the destination could not be found. This could be due to a router issue, the remote server being down, or the source computer not being connected to a network.",
+        "tags": [
+            "ping",
+            "error",
+            "destination host unreachable"
+        ]
+    },
+    {
+        "front": "Why is it useful to `ping` a domain name (e.g., `yahoo.com`) instead of just an IP address?",
+        "back": "It simultaneously tests for network connectivity and for DNS name resolution, verifying that the DNS server is correctly translating the domain name into an IP address.",
+        "tags": [
+            "ping",
+            "dns",
+            "name resolution"
+        ]
+    },
+    {
+        "front": "If you can successfully `ping` a public website, what does that confirm?",
+        "back": "It confirms that your hardware (cables, NIC, router, modem) and ISP connection are working. The problem is likely software-related (e.g., internet browser, firewall).",
+        "tags": [
+            "ping",
+            "troubleshooting",
+            "internet connection"
+        ]
+    },
+    {
+        "front": "What is a loopback test using `ping` and what does it check?",
+        "back": "Pinging the loopback address (`127.0.0.1` or `localhost`). It tests if the local network interface card (NIC) is working correctly by sending signals back to the same computer.",
+        "tags": [
+            "ping",
+            "loopback",
+            "127.0.0.1",
+            "localhost",
+            "NIC"
+        ]
+    },
+    {
+        "front": "What is the `traceroute` (or `tracert`) command?",
+        "back": "A command-line utility used to show the network path (route) that data packets take to travel from a source to a destination.",
+        "tags": [
+            "traceroute",
+            "tracert",
+            "networking",
+            "utility"
+        ]
+    },
+    {
+        "front": "What is the main purpose of using `traceroute`?",
+        "back": "To find problems along the network path, such as bottlenecks or connection interruptions, by showing each \"hop\" (router) the packet passes through.",
+        "tags": [
+            "traceroute",
+            "troubleshooting",
+            "bottleneck",
+            "hops"
+        ]
+    },
+    {
+        "front": "How does `traceroute` work?",
+        "back": "It sends data packets to the destination, pinging each router (hop) along the way. It measures the round-trip time for the packets to travel to each router and back.",
+        "tags": [
+            "traceroute",
+            "packets",
+            "round-trip time",
+            "hops"
+        ]
+    },
+    {
+        "front": "What is a \"hop\" in a `traceroute` result?",
+        "back": "A hop represents a router that the data packets pass through on their way to the destination. Each numbered line in the `traceroute` output corresponds to a hop.",
+        "tags": [
+            "traceroute",
+            "hop",
+            "router"
+        ]
+    },
+    {
+        "front": "How is `traceroute` different from `ping`?",
+        "back": "`Ping` only tests connectivity to the final destination. `Traceroute` tests connectivity and measures response time for every router along the entire path to the destination.",
+        "tags": [
+            "traceroute",
+            "ping",
+            "comparison"
+        ]
+    },
+    {
+        "front": "In a `traceroute` result, what information is shown for each hop?",
+        "back": "The hop number, the round-trip time for three separate packets (in milliseconds), and the IP address or domain name of the router.",
+        "tags": [
+            "traceroute",
+            "output",
+            "round-trip time"
+        ]
+    },
+    {
+        "front": "What does a sudden large increase in round-trip time at a specific hop in a `traceroute` indicate?",
+        "back": "It can indicate a problem or bottleneck at that specific router on the network, which is causing a delay.",
+        "tags": [
+            "traceroute",
+            "latency",
+            "bottleneck",
+            "troubleshooting"
+        ]
+    },
+    {
+        "front": "What does it mean if a `traceroute` shows asterisks (`* * *`) and \"Request timed out\"?",
+        "back": "It means a router at that hop did not respond. This could be a problem, or the router might be configured to not return `traceroute` replies, but still pass the data along.",
+        "tags": [
+            "traceroute",
+            "request timed out",
+            "error"
+        ]
+    },
+    {
+        "front": "What is TTL (Time To Live) in the context of `traceroute`?",
+        "back": "A value given to a data packet that limits its lifespan. It prevents packets from traveling endlessly around the internet in a loop by being discarded after a certain number of hops.",
+        "tags": [
+            "traceroute",
+            "TTL",
+            "time to live",
+            "networking"
+        ]
+    },
+    {
+        "front": "What is the command for `traceroute` on Windows vs. macOS/Linux?",
+        "back": "On Windows, the command is `tracert`. On macOS and Linux systems, the command is `traceroute`.",
+        "tags": [
+            "tracert",
+            "traceroute",
+            "windows",
+            "macos",
+            "linux",
+            "command"
+        ]
+    }
+]

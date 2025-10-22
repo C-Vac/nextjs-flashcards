@@ -1,0 +1,245 @@
+[
+    {
+        "front": "What are the key issues addressed by web server farms?",
+        "back": "They address redundancy to eliminate single points of failure (requiring backup and failover) and security (using firewalls, network/port address translation, and SSL).",
+        "tags": [
+            "Web Server",
+            "Course Intro"
+        ]
+    },
+    {
+        "front": "What is a simple analogy for serverless architecture?",
+        "back": "Instead of building and maintaining your own server (like a private playground), you use on-demand resources provided by a service (like a public park).",
+        "tags": [
+            "Serverless",
+            "Course Intro"
+        ]
+    },
+    {
+        "front": "What are the HTML tags for a definition list, a term, and a description?",
+        "back": "<dl> (definition list), <dt> (definition term), and <dd> (definition description).",
+        "tags": [
+            "HTML"
+        ]
+    },
+    {
+        "front": "Which two list elements were deprecated in HTML4 but reintroduced in HTML5?",
+        "back": "The definition list (<dl>) and the menu element (<menu>).",
+        "tags": [
+            "HTML"
+        ]
+    },
+    {
+        "front": "What do the `rowspan` and `colspan` attributes do in an HTML table?",
+        "back": "The `rowspan` attribute makes a table cell span across multiple rows. The `colspan` attribute makes a cell span across multiple columns.",
+        "tags": [
+            "HTML"
+        ]
+    },
+    {
+        "front": "What CSS properties replaced the deprecated `align` and `valign` table attributes in HTML5?",
+        "back": "The `text-align` property replaced `align` for horizontal alignment, and the `vertical-align` property replaced `valign` for vertical alignment.",
+        "tags": [
+            "HTML",
+            "CSS"
+        ]
+    },
+    {
+        "front": "What are the two forms of character references in HTML?",
+        "back": "1. Numeric character references (e.g., `&#60;` for <). 2. Character entity references (e.g., `&lt;` for <).",
+        "tags": [
+            "HTML"
+        ]
+    },
+    {
+        "front": "How do you create a client-side image map in HTML?",
+        "back": "Use an `<img>` tag with a `usemap` attribute, a `<map>` tag with a matching `name` attribute, and `<area>` tags inside the map to define clickable regions.",
+        "tags": [
+            "HTML"
+        ]
+    },
+    {
+        "front": "What is the purpose of the `<iframe>` HTML tag?",
+        "back": "It is used to embed another website or HTML document within the current page.",
+        "tags": [
+            "HTML"
+        ]
+    },
+    {
+        "front": "What is the purpose of the `<meta>` element in HTML?",
+        "back": "It provides metadata about the HTML document, such as description, keywords, author, and instructions for search engine robots.",
+        "tags": [
+            "HTML"
+        ]
+    },
+    {
+        "front": "What is the purpose of the `media` attribute in a `<style>` or `<link>` tag?",
+        "back": "It specifies which media/device the styles should apply to. Common values include `screen`, `print`, and `projection`.",
+        "tags": [
+            "CSS"
+        ]
+    },
+    {
+        "front": "What is the difference between a CSS pseudo-class and a pseudo-element?",
+        "back": "A pseudo-class selects elements based on a special state (e.g., `:hover`, `:first-child`). A pseudo-element styles a specific part of an element (e.g., `::first-line`, `::before`).",
+        "tags": [
+            "CSS"
+        ]
+    },
+    {
+        "front": "What are the four components of the CSS Box Model, from innermost to outermost?",
+        "back": "1. Content, 2. Padding, 3. Border, 4. Margin.",
+        "tags": [
+            "CSS"
+        ]
+    },
+    {
+        "front": "What are the key limitations of client-side JavaScript for security reasons?",
+        "back": "It cannot directly access the local file system and has network connections restricted by the Same-Origin Policy (it can generally only communicate with the server that sent the page).",
+        "tags": [
+            "JavaScript",
+            "Security"
+        ]
+    },
+    {
+        "front": "What are the three main JavaScript pop-up box functions?",
+        "back": "`alert()`, `confirm()`, and `prompt()`.",
+        "tags": [
+            "JavaScript"
+        ]
+    },
+    {
+        "front": "In JavaScript, what is the difference between `undefined` and `null`?",
+        "back": "`undefined` means a variable has been declared but has not been assigned a value. `null` is an assignment value that represents the intentional absence of any object value.",
+        "tags": [
+            "JavaScript"
+        ]
+    },
+    {
+        "front": "What is the purpose of a \"reviver\" function in `JSON.parse()`?",
+        "back": "It is an optional second argument that acts as a transformation function, allowing you to modify values as they are being parsed. A common use is to convert date strings into true Date objects.",
+        "tags": [
+            "JSON",
+            "JavaScript"
+        ]
+    },
+    {
+        "front": "What is the basic structure of a request using the Fetch API to get JSON data?",
+        "back": "`fetch('url').then(response => response.json()).then(data => { /* process data */ }).catch(error => { /* handle error */ });`",
+        "tags": [
+            "JavaScript",
+            "Fetch API",
+            "AJAX"
+        ]
+    },
+    {
+        "front": "Which DOM method is used to select a single element by its unique ID?",
+        "back": "`document.getElementById('elementId')`",
+        "tags": [
+            "DOM",
+            "JavaScript"
+        ]
+    },
+    {
+        "front": "Which DOM method is used to select multiple elements based on a CSS selector?",
+        "back": "`document.querySelectorAll('css-selector')`",
+        "tags": [
+            "DOM",
+            "JavaScript"
+        ]
+    },
+    {
+        "front": "Why is it inefficient to repeatedly use `element.innerHTML += '...'` in a loop?",
+        "back": "Because each time it's called, the browser must re-parse and re-render the entire HTML content of the element, which is slow for large amounts of content.",
+        "tags": [
+            "DOM",
+            "JavaScript",
+            "Performance"
+        ]
+    },
+    {
+        "front": "What is a more performant alternative to using `innerHTML +=` to add new elements?",
+        "back": "Create the new element with `document.createElement()` and then add it to the DOM using `element.appendChild()`.",
+        "tags": [
+            "DOM",
+            "JavaScript",
+            "Performance"
+        ]
+    },
+    {
+        "front": "How do you parse an XML string into a document object using the Fetch API?",
+        "back": "First, fetch the data and get its text content with `.text()`. Then, create a `new DOMParser()` and use its `.parseFromString(text, 'text/xml')` method.",
+        "tags": [
+            "JavaScript",
+            "Fetch API",
+            "XML"
+        ]
+    },
+    {
+        "front": "What is the `window` object in client-side JavaScript?",
+        "back": "It is the highest-level, global object that represents the browser window containing a DOM document.",
+        "tags": [
+            "JavaScript",
+            "DOM"
+        ]
+    },
+    {
+        "front": "What does the `navigator.userAgent` property contain?",
+        "back": "It contains a string sent by the browser to the server that provides details about the browser type, version, and operating system.",
+        "tags": [
+            "JavaScript",
+            "DOM"
+        ]
+    },
+    {
+        "front": "When an object is passed to a JavaScript function, what happens if the function modifies one of the object's properties?",
+        "back": "The original object is modified. This is because objects are passed by reference (technically, the reference is passed by value).",
+        "tags": [
+            "JavaScript"
+        ]
+    },
+    {
+        "front": "What is type coercion in JavaScript? Give an example.",
+        "back": "It is the automatic or implicit conversion of values from one data type to another. For example, in the expression `'3' * '5'`, JavaScript coerces the strings to numbers to produce `15`.",
+        "tags": [
+            "JavaScript"
+        ]
+    },
+    {
+        "front": "What is the difference in hoisting between a `var` declaration and a `let`/`const` declaration?",
+        "back": "`var` declarations are hoisted and initialized with `undefined`. `let` and `const` declarations are hoisted but are not initialized, putting them in a \"Temporal Dead Zone\" until their declaration is reached.",
+        "tags": [
+            "JavaScript"
+        ]
+    },
+    {
+        "front": "What is the difference in hoisting between a function declaration and a function expression?",
+        "back": "Function declarations are fully hoisted (both name and body), so they can be called before they are defined. For function expressions, only the variable declaration is hoisted, not the function assignment, so they cannot be called before they are assigned.",
+        "tags": [
+            "JavaScript"
+        ]
+    },
+    {
+        "front": "What is the difference between the RegExp methods `test()` and `exec()`?",
+        "back": "`test()` returns a boolean (`true` or `false`) indicating if there is a match. `exec()` returns an array containing detailed information about the match (or `null` if no match is found).",
+        "tags": [
+            "JavaScript",
+            "RegEx"
+        ]
+    },
+    {
+        "front": "In Regular Expressions, what do the quantifiers `+`, `*`, and `?` mean?",
+        "back": "`+` matches one or more of the preceding token. `*` matches zero or more. `?` matches zero or one.",
+        "tags": [
+            "RegEx"
+        ]
+    },
+    {
+        "front": "How do you create and access a captured group in a regular expression?",
+        "back": "Create a captured group by wrapping a part of the pattern in parentheses `()`. Access the matched substring from the result array of `match()` or `exec()`, starting at index 1 (e.g., `result[1]`).",
+        "tags": [
+            "JavaScript",
+            "RegEx"
+        ]
+    }
+]

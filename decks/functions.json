@@ -1,0 +1,116 @@
+[
+    {
+        "front": "What are the key properties to check in an `onreadystatechange` event handler for a successful XMLHttpRequest?",
+        "back": "You must check if `xmlhttp.readyState == 4` (meaning the request is finished and the response is ready) AND `xmlhttp.status == 200` (meaning the request was successful, \"OK\").",
+        "tags": [
+            "AJAX",
+            "XMLHttpRequest"
+        ]
+    },
+    {
+        "front": "In the classic AJAX pattern, what are the roles of `xmlhttp.open()` and `xmlhttp.send()`?",
+        "back": "`xmlhttp.open(\"GET\", url, true)` initializes the request, specifying the method (GET), the URL, and whether it should be asynchronous (true). `xmlhttp.send()` executes the network request.",
+        "tags": [
+            "AJAX",
+            "XMLHttpRequest"
+        ]
+    },
+    {
+        "front": "What is the key difference between `responseText` and `responseXML` in an `XMLHttpRequest` object?",
+        "back": "`responseText` returns the server response as a string of text (used for JSON). `responseXML` returns the response as an XML DOM object, which can be parsed using DOM methods.",
+        "tags": [
+            "AJAX",
+            "XMLHttpRequest",
+            "XML"
+        ]
+    },
+    {
+        "front": "What is the modern, promise-based alternative to `XMLHttpRequest` for making network requests?",
+        "back": "The `Fetch API`, which uses the `fetch()` function. It simplifies asynchronous requests by using Promises (`.then()` and `.catch()`).",
+        "tags": [
+            "AJAX",
+            "Fetch API",
+            "Promises"
+        ]
+    },
+    {
+        "front": "In a `fetch()` call, what is the purpose of the first `.then()` that calls `response.json()`?",
+        "back": "The initial `fetch()` resolves with a `Response` object, which is just an HTTP response, not the actual data. The `response.json()` method is called to read the response stream, parse it as JSON, and return a new promise that resolves with the resulting JavaScript object.",
+        "tags": [
+            "Fetch API",
+            "Promises",
+            "JSON"
+        ]
+    },
+    {
+        "front": "How do you check for an HTTP error (like a 404 or 500 status) when using the `fetch()` API?",
+        "back": "You check the `ok` property of the response object. If `!response.ok` is true, it indicates an HTTP error, and you should typically throw an error to be caught by the `.catch()` block.",
+        "tags": [
+            "Fetch API",
+            "Error Handling"
+        ]
+    },
+    {
+        "front": "What function from the document is used to dynamically get the property names (headers) from the first object in a JSON array?",
+        "back": "`Object.keys(jsonObj.catalog.aircraft[0])` is used. `Object.keys()` returns an array of a given object's own enumerable property names, which can then be looped through to create table headers.",
+        "tags": [
+            "JavaScript",
+            "JSON",
+            "Objects"
+        ]
+    },
+    {
+        "front": "How do you parse a string of XML data retrieved from a network request?",
+        "back": "You create a new `DOMParser` object and then use its `parseFromString()` method, passing in the XML data string and the MIME type \"text/xml\". Example: `parser.parseFromString(data, \"text/xml\")`.",
+        "tags": [
+            "XML",
+            "DOMParser",
+            "JavaScript"
+        ]
+    },
+    {
+        "front": "According to the `generateHTML()` function example, how are image URLs handled differently from other JSON data when building an HTML table?",
+        "back": "Instead of displaying the image URL as text, the code checks if the header is \"Image\". If it is, it renders the URL inside an `<img>` tag's `src` attribute, making the image visible in the table.",
+        "tags": [
+            "JavaScript",
+            "DOM",
+            "JSON"
+        ]
+    },
+    {
+        "front": "What is the purpose of the `document.querySelectorAll()` function?",
+        "back": "It returns a static `NodeList` containing all elements in the document that match a specified group of CSS selectors. For example, `querySelectorAll('.font1, .font2')` would select all elements with either the class `font1` or `font2`.",
+        "tags": [
+            "DOM",
+            "Selectors",
+            "JavaScript"
+        ]
+    },
+    {
+        "front": "Why is `appendChild()` often a more efficient method for adding content to the DOM than using `innerHTML += ...`?",
+        "back": "Using `innerHTML += ...` forces the browser to re-parse and re-render the entire content of the parent element. In contrast, `appendChild()` modifies the DOM directly by adding a new node, which is more efficient as it doesn't re-parse existing content.",
+        "tags": [
+            "DOM",
+            "Performance",
+            "JavaScript"
+        ]
+    },
+    {
+        "front": "In the 'Reversing the Nodes' example, what is the logic used to reverse the child elements of a node `n`?",
+        "back": "The code loops backward through the `n.childNodes` collection. In each iteration, it removes the child at index `i` using `n.removeChild(kids[i])` and immediately adds it to the end of the list using `n.appendChild(c)`, effectively reversing the order.",
+        "tags": [
+            "DOM",
+            "JavaScript",
+            "Algorithms"
+        ]
+    },
+    {
+        "front": "What are the three methods shown in 'Example 12' for directly manipulating the text content of a DOM node?",
+        "back": "1. `appendData(phrase)`: Adds a string to the end of the node's text.\n2. `deleteData(offset, count)`: Deletes a number of characters starting from an offset.\n3. `replaceData(offset, count, str)`: Replaces a number of characters with a new string.",
+        "tags": [
+            "DOM",
+            "CharacterData",
+            "JavaScript"
+        ]
+    }
+]
