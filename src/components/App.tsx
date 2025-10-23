@@ -508,7 +508,8 @@ const FlashcardApp: NextPage = () => {
                 Discover Decks
               </h3>
               <p className="text-sm text-blue-500 mb-3">
-                Automatically discover and load flashcard decks from the ./decks directory.
+                Automatically discover and load flashcard decks from the ./decks
+                directory.
               </p>
               <button
                 onClick={discoverDecks}
