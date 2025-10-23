@@ -84,8 +84,15 @@ Follow these steps to get the project running on your local machine:
 *   This means the data is tied to the specific browser you are using on your specific computer.
 *   If you clear your browser's data/cache/storage, **you will lose all your flashcards and progress.**
 *   Data will not sync across different browsers or different computers.
-*   Using Incognito or Private Browsing mode will likely mean data is lost when you close the window.
+    *   Using Incognito or Private Browsing mode will likely mean data is lost when you close the window.
+
+## AI-Powered Features (Under Development)
+
+This application is actively being enhanced with advanced AI capabilities to provide a more intelligent and personalized learning experience. Future updates will include features such as AI-driven flashcard generation from text or topics, AI-suggested card improvements, and adaptive learning sessions.
+
+For developers interested in contributing to these new features or understanding the AI integration, please refer to the [`DEVELOPMENT.md`](./DEVELOPMENT.md) guide.
 
 ---
 
 Happy studying!
+
