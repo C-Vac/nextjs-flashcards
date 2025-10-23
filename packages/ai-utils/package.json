@@ -1,0 +1,8 @@
+{
+  "name": "@packages/ai-utils",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "dependencies": {}
+}

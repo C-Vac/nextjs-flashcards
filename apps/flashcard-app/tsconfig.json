@@ -13,11 +13,17 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "baseUrl": ".",
     "paths": {
-      "@packages/ui-components": ["packages/ui-components/src"],
-      "@packages/flashcard-types": ["packages/flashcard-types/index.ts"],
-      "@packages/ai-utils": ["packages/ai-utils/src"]
+      "@/*": ["./src/*"],
+      "@packages/ui-components": ["../../packages/ui-components/src"],
+      "@packages/flashcard-types": ["../../packages/flashcard-types/index.ts"],
+      "@packages/ai-utils": ["../../packages/ai-utils/src"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { AllDecks, Deck, Card } from "@/types/flashcard";
+import { AllDecks, Deck, Card } from "@packages/flashcard-types";
 
 // --- LocalStorage Keys ---
 const LS_ALL_DECKS_KEY = "flashcard_allDecks";

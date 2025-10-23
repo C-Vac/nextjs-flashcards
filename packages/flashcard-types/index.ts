@@ -23,4 +23,4 @@ export interface Deck {
 
 export type AllDecks = Record<string, Deck>;
 
-export type View = "viewer" | "stats" | "manage_decks" | "settings";
+export type View = "viewer" | "stats" | "manage_decks" | "settings" | "ai_generate";

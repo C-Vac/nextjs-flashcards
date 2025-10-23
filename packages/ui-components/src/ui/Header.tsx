@@ -1,8 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import type { View, Deck } from "@/types/flashcard";
+import { Button } from "./button";
+import { Badge } from "./badge";
+import type { View, Deck } from "@packages/flashcard-types";
 
 interface HeaderProps {
   view: View;
@@ -55,6 +55,12 @@ export function Header({ view, currentDeck, onSetView }: HeaderProps) {
           variant={view === "settings" ? "default" : "outline"}
         >
           Settings
+        </Button>
+        <Button
+          onClick={() => onSetView("ai_generate")}
+          variant={view === "ai_generate" ? "default" : "outline"}
+        >
+          AI Generate
         </Button>
       </nav>
     </div>

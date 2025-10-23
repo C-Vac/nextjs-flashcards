@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback } from "react";
-import { AllDecks, Deck, Card, View } from "@/types/flashcard";
+import { AllDecks, Deck, Card, View } from "@packages/flashcard-types";
 
 interface DeckFile {
   filename: string;

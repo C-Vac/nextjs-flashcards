@@ -7,18 +7,19 @@ import type {
   Deck,
   AllDecks,
   View,
-} from "@/types/flashcard";
+} from "@packages/flashcard-types";
 import { useFlashcardPersistence } from "@/hooks/useFlashcardPersistence";
 import { useDeckManagement } from "@/hooks/useDeckManagement";
 
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import type { NextPage } from "next";
 
-import { Header } from "@/components/ui/Header";
+import { Header } from "@packages/ui-components";
 import { Viewer } from "@/components/views/Viewer";
 import { Stats } from "@/components/views/Stats";
 import { ManageDecks } from "@/components/views/ManageDecks";
 import { Settings } from "@/components/views/Settings";
+import AIGenerate from "@/components/views/AIGenerate";
 
 const FlashcardApp: NextPage = () => {
   // --- State ---
@@ -283,6 +284,8 @@ const FlashcardApp: NextPage = () => {
             onClearAllData={clearAllData}
           />
         )}
+
+        {view === "ai_generate" && <AIGenerate onSetView={(v) => setView(v)} />}
       </div>
 
       <footer className="text-center text-xs text-gray-400 mt-6">
