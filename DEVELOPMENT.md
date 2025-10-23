@@ -25,7 +25,7 @@ The application follows a client-server architecture, with a Next.js frontend an
 
 ### 2.2. AI Backend (Planned)
 
-*   **Technology:** (To be decided, e.g., Node.js with Express.js or Python with FastAPI).
+*   **Technology:** Node.js with Express. This choice is driven by because GG said so.
 *   **Responsibilities:**
     *   Exposing RESTful API endpoints for AI functionalities (e.g., `/api/generate-flashcards`, `/api/suggest-tags`).
     *   Orchestrating calls to various AI models (local or cloud-based).
@@ -94,3 +94,37 @@ Here are the user stories guiding our initial AI integration efforts:
     *   **Description:** As a user, I want to select an existing flashcard and ask the AI to suggest alternative phrasing for the front or back to improve clarity, conciseness, or accuracy, so my study materials are of higher quality.
 
 Further user stories will be prioritized in subsequent sprints.
+
+### 5.1. Detailed AI Integration Plans for User Stories
+
+#### US-1: AI-Powered Flashcard Generation from Text
+*   **Frontend Interaction:** Users will access a dedicated "Generate from Text" interface. A text area will allow pasting content. A "Generate Flashcards" button will trigger the backend API call.
+*   **Backend Processing (`POST /api/generate-flashcards-from-text`):**
+    1.  Receives the raw text input from the frontend.
+    2.  Performs initial text cleaning and chunking if necessary to fit within AI model token limits.
+    3.  Constructs a detailed prompt for the AI model, instructing it to identify key concepts, definitions, and relationships within the text and format them as flashcards (front, back, and relevant tags).
+    4.  Calls the integrated AI model (e.g., Google Gemini API).
+    5.  Parses the AI model's response, extracting the generated flashcard data.
+    6.  Validates the structure and content of the generated flashcards.
+    7.  Returns the structured flashcard data to the frontend.
+*   **AI Model Role:** Extracts information, synthesizes questions/answers, and suggests tags based on the provided text.
+
+#### US-2: AI-Powered Flashcard Generation from Topic
+*   **Frontend Interaction:** Users will use a "Generate from Topic" interface, providing a topic or concept via an input field. A "Generate Flashcards" button will initiate the process.
+*   **Backend Processing (`POST /api/generate-flashcards-from-topic`):**
+    1.  Receives the topic/concept string from the frontend.
+    2.  Constructs a prompt for the AI model, asking it to generate comprehensive flashcards (front, back, and relevant tags) on the given topic, covering foundational knowledge, key terms, and important details.
+    3.  Calls the integrated AI model.
+    4.  Parses and validates the AI model's output.
+    5.  Returns the structured flashcard data to the frontend.
+*   **AI Model Role:** Acts as a knowledge base, generating educational content and structuring it into flashcards for a specified topic.
+
+#### US-3: AI-Suggested Card Improvements
+*   **Frontend Interaction:** Users will have an "Improve Card" option when viewing an existing flashcard. Clicking this will send the current flashcard's front and back content to the backend.
+*   **Backend Processing (`POST /api/suggest-card-improvements`):**
+    1.  Receives the existing flashcard's front and back content from the frontend.
+    2.  Constructs a prompt for the AI model, requesting suggestions for alternative phrasing to improve clarity, conciseness, or accuracy of both the front and back of the card.
+    3.  Calls the integrated AI model.
+    4.  Parses the AI model's response, which will contain suggested improvements.
+    5.  Returns the suggestions to the frontend.
+*   **AI Model Role:** Analyzes existing text for potential improvements in phrasing, offering alternatives to enhance learning efficacy.

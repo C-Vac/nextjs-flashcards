@@ -41,6 +41,7 @@ const FlashcardApp: NextPage = () => {
     handleDeckNameSave,
     handleDeckNameCancel,
     setTempDeckName, // Expose setTempDeckName for direct use in input
+    discoverDecks,
   } = useDeckManagement({
     allDecks,
     setAllDecks,
@@ -498,6 +499,22 @@ const FlashcardApp: NextPage = () => {
                 className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 text-sm"
               >
                 Choose JSON File...
+              </button>
+            </div>
+
+            {/* Discovery Section */}
+            <div className="mb-6 p-4 border border-dashed border-blue-300 rounded bg-blue-50 text-center">
+              <h3 className="text-lg font-medium mb-2 text-blue-600">
+                Discover Decks
+              </h3>
+              <p className="text-sm text-blue-500 mb-3">
+                Automatically discover and load flashcard decks from the ./decks directory.
+              </p>
+              <button
+                onClick={discoverDecks}
+                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm"
+              >
+                Discover Decks
               </button>
             </div>
 

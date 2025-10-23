@@ -1,0 +1,173 @@
+[
+    {
+        "front": "What is a component in software architecture?",
+        "back": "A collection of one or more services that may be used by other components.",
+        "tags": [
+            "component",
+            "definition"
+        ]
+    },
+    {
+        "front": "What is a service in software architecture?",
+        "back": "A coherent fragment of functionality that can be used by components.",
+        "tags": [
+            "service",
+            "definition"
+        ]
+    },
+    {
+        "front": "What are the different scales at which a service can operate?",
+        "back": "A service can range from a large-scale service, such as a database service, to a microservice, which performs one very specific task.",
+        "tags": [
+            "service",
+            "microservice",
+            "scale"
+        ]
+    },
+    {
+        "front": "What is a client-server architecture?",
+        "back": "A type of distribution architecture where clients access a shared database and business logic operations on a central server.",
+        "tags": [
+            "client-server",
+            "architecture",
+            "definition"
+        ]
+    },
+    {
+        "front": "What is a multi-tier client-server architecture?",
+        "back": "An architecture, often used in web-based applications, that uses several communicating servers, with each server having its own specific responsibilities.",
+        "tags": [
+            "multi-tier",
+            "architecture",
+            "client-server"
+        ]
+    },
+    {
+        "front": "What is the relationship between a component and a service?",
+        "back": "A component is a logical and physical packaging of one or more related services.",
+        "tags": [
+            "component",
+            "service",
+            "relationship"
+        ]
+    },
+    {
+        "front": "What is a key characteristic of a microservice?",
+        "back": "A microservice is a small, independently deployable service that is designed to do one very specific thing well.",
+        "tags": [
+            "service",
+            "microservice"
+        ]
+    },
+    {
+        "front": "For what kind of applications is a client-server architecture well-suited?",
+        "back": "Applications where multiple clients need to access a shared database and utilize common business logic.",
+        "tags": [
+            "client-server",
+            "use case"
+        ]
+    },
+    {
+        "front": "In a multi-tier architecture, what is meant by 'communicating servers'?",
+        "back": "It means the different servers (or tiers) in the architecture pass information to each other to fulfill a request. For example, a web server might communicate with an application server, which in turn communicates with a database server.",
+        "tags": [
+            "multi-tier",
+            "architecture",
+            "server communication"
+        ]
+    },
+    {
+        "front": "In a client-server architecture, where is the business logic typically located?",
+        "back": "The business logic operations are located on the server, which allows them to be shared and consistently applied for all clients.",
+        "tags": [
+            "client-server",
+            "business logic"
+        ]
+    },
+    {
+        "front": "What is a common example of a multi-tier architecture?",
+        "back": "The 3-tier architecture, which separates an application into a presentation tier (UI), an application tier (business logic), and a data tier (database).",
+        "tags": [
+            "multi-tier",
+            "example",
+            "3-tier architecture"
+        ]
+    },
+    {
+        "front": "What are the two main parts of a basic client-server architecture?",
+        "back": "The 'client', which requests services, and the 'server', which provides services, data, and business logic.",
+        "tags": [
+            "client-server",
+            "core concepts"
+        ]
+    },
+    {
+        "front": "Why is separating responsibilities among different servers in a multi-tier architecture beneficial?",
+        "back": "It improves scalability, maintainability, and flexibility. Each tier can be developed, managed, and scaled independently of the others.",
+        "tags": [
+            "multi-tier",
+            "benefits",
+            "scalability"
+        ]
+    },
+    {
+        "front": "What is an example of a large-scale service mentioned in the text?",
+        "back": "A database service.",
+        "tags": [
+            "service",
+            "example"
+        ]
+    },
+    {
+        "front": "What architectural style is heavily based on the concept of discrete 'services'?",
+        "back": "Service-Oriented Architecture (SOA) is an architectural style that structures an application as a collection of loosely coupled, interoperable services.",
+        "tags": [
+            "service",
+            "architecture",
+            "SOA"
+        ]
+    },
+    {
+        "front": "What is the primary role of the client in a client-server model?",
+        "back": "The client is responsible for the presentation layer and for initiating requests to the server for data or to execute business logic.",
+        "tags": [
+            "client-server",
+            "client",
+            "role"
+        ]
+    },
+    {
+        "front": "What is the primary role of the server in a client-server model?",
+        "back": "The server is responsible for managing shared resources like a database, processing client requests, and executing business logic.",
+        "tags": [
+            "client-server",
+            "server",
+            "role"
+        ]
+    },
+    {
+        "front": "How does a multi-tier architecture support modern web applications?",
+        "back": "It allows for the separation of concerns, such as separating the user interface (web server) from the core business processing (application server), making complex applications easier to manage and scale.",
+        "tags": [
+            "multi-tier",
+            "web application"
+        ]
+    },
+    {
+        "front": "What is a 'distribution architecture'?",
+        "back": "An architectural pattern where components of a software system are located on different networked computers and communicate with each other. Client-server is a type of distribution architecture.",
+        "tags": [
+            "architecture",
+            "distribution",
+            "client-server"
+        ]
+    },
+    {
+        "front": "What is a 'coherent fragment of functionality'?",
+        "back": "This describes a service. It means the service has a clear, well-defined purpose and encapsulates all the logic needed to perform its specific function.",
+        "tags": [
+            "service",
+            "definition"
+        ]
+    }
+]
