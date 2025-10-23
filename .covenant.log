@@ -1,0 +1,9 @@
+---
+title: Goblini Covenant Activity Log
+description: This file logs significant actions and decisions made by the Goblini Covenant.
+master: /home/goblindeb/brain/.covenant.log
+---
+
+# --- BEGIN LOG ---
+id date time agent status message
+0 2025-10-23 04:25:24 prime 0 Refactored NewApp.tsx using useFlashcardPersistence and useDeckManagement hooks.
