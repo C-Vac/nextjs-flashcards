@@ -1,25 +1,25 @@
-const fs = require("fs");
-const path = require("path");
+import { readFileSync } from "fs";
+import { join } from "path";
 
-const promptsDir = path.join(__dirname, "../prompts");
+const promptsDir = join(process.cwd(), "prompts");
 
-function buildPromptForText(text) {
-  const promptTemplate = fs.readFileSync(
-    path.join(promptsDir, "generate_flashcards.txt"),
+export function buildPromptForText(text) {
+  const promptTemplate = readFileSync(
+    join(promptsDir, "generate_flashcards.txt"),
     "utf8"
   );
   return `${promptTemplate}\n\nText: ${text}`;
 }
 
-function buildPromptForTopic(topic) {
-  const promptTemplate = fs.readFileSync(
-    path.join(promptsDir, "generate_flashcards.txt"),
+export function buildPromptForTopic(topic) {
+  const promptTemplate = readFileSync(
+    join(promptsDir, "generate_flashcards.txt"),
     "utf8"
   );
   return `${promptTemplate}\n\nTopic: ${topic}`;
 }
 
-function buildPromptForImprovements(front, back) {
+export function buildPromptForImprovements(front, back) {
   return `Suggest improvements for the following flashcard:
 
 Front: ${front}
@@ -28,7 +28,7 @@ Back: ${back}
 Provide alternative phrasing for front and back to improve clarity, conciseness, or accuracy. Respond in JSON format: {"front": "improved front", "back": "improved back"}`;
 }
 
-module.exports = {
+export default {
   buildPromptForText,
   buildPromptForTopic,
   buildPromptForImprovements,

@@ -18,7 +18,7 @@ const AIGenerate = ({ onSetView }: { onSetView: (view: View) => void }) => {
     setLoading(true);
     try {
       const response = await fetch(
-        "http://localhost:3001/api/generate-flashcards/from-text",
+        "/api/generate-flashcards",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -39,7 +39,7 @@ const AIGenerate = ({ onSetView }: { onSetView: (view: View) => void }) => {
     setLoading(true);
     try {
       const response = await fetch(
-        "http://localhost:3001/api/generate-flashcards/from-topic",
+        "/api/generate-flashcards",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
