@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const generateFlashcardsRoute = require('./routes/generateFlashcards');
-const suggestImprovementsRoute = require('./routes/suggestImprovements');
+const { generateFlashcardsHandler, suggestImprovementsHandler }  = require('utils.js')
 
 const app = express();
 const PORT = process.env.PORT || 3001;

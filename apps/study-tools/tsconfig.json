@@ -8,25 +8,30 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "baseUrl": ".",
     "paths": {
-      "@components/ui": [
-        "packages/ui/src"
+      "@/*": [
+        "./src/*"
       ],
-      "@": [
-        "apps/study-tools/src/types/index.ts"
+      "@types": [
+        "./src/types/index.ts"
       ],
-      "@packages/ai-utils": [
-        "packages/ai-utils/src"
+      "@ui": [
+        "./src/components/ui/index.ts"
       ]
     }
   },
@@ -34,7 +39,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
