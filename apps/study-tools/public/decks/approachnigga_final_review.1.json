@@ -1,0 +1,180 @@
+[
+    {
+        "front": "Explain the logic of selection bias using the aspirin/headache example from the text.",
+        "back": "Selection bias occurs when the groups being compared are fundamentally different even without treatment. In the aspirin example, people who choose to take aspirin likely have worse headaches to begin with. Therefore, even if aspirin worked, the 'treated' group might still have higher headache levels than the 'control' group, making the drug look ineffective or harmful.",
+        "tags": [
+            "Causal Inference",
+            "Selection Bias",
+            "Logic"
+        ]
+    },
+    {
+        "front": "Decompose the 'Observed Difference' between a treatment and control group into its two constituent components.",
+        "back": "Observed Difference = [Average Treatment Effect on the Treated (ATT)] + [Selection Bias]. \nMathematically: E[Yi | Di=1] - E[Yi | Di=0] = (E[Y1i | Di=1] - E[Y0i | Di=1]) + (E[Y0i | Di=1] - E[Y0i | Di=0]).",
+        "tags": [
+            "Causal Inference",
+            "ATT",
+            "Selection Bias"
+        ]
+    },
+    {
+        "front": "What does the Gauss-Markov Theorem state regarding the OLS estimator?",
+        "back": "It states that under the Gauss-Markov assumptions, the OLS estimator is BLUE: Best (minimum variance) Linear Unbiased Estimator. This means no other linear unbiased estimator has a smaller variance than OLS.",
+        "tags": [
+            "OLS",
+            "Gauss-Markov",
+            "Theory"
+        ]
+    },
+    {
+        "front": "How does an RCT (Randomized Controlled Trial) specifically eliminate selection bias?",
+        "back": "By randomly assigning treatment (Di), the treatment status becomes independent of the potential outcomes (Y1i, Y0i). This ensures that the average outcome the treated group would have had without treatment is the same as the control group's average outcome: E[Y0i | Di=1] = E[Y0i | Di=0], making selection bias zero.",
+        "tags": [
+            "RCT",
+            "Causal Inference",
+            "Selection Bias"
+        ]
+    },
+    {
+        "front": "Interpret the meaning of the Intercept (β0) in a regression where all independent variables are dummy variables.",
+        "back": "β0 represents the predicted mean value of the dependent variable (Y) for the 'omitted' or 'reference' group (the group where all included dummy variables are equal to zero).",
+        "tags": [
+            "Multiple Regression",
+            "Dummy Variables",
+            "Interpretation"
+        ]
+    },
+    {
+        "front": "What is the mathematical definition of 'Perfect Multicollinearity'?",
+        "back": "It occurs when one of the regressors is a perfect linear function of the other regressors. Formally, if we can find constants a1, a2, ..., ak such that X1 = a1 + a2X2 + ... + akXk for all observations.",
+        "tags": [
+            "Multiple Regression",
+            "Multicollinearity",
+            "Math"
+        ]
+    },
+    {
+        "front": "In the context of OVB, explain what the 'gamma' (γ) coefficient represents in the formula: β̂1 → β1 + γ [Cov(X,Z)/Var(X)].",
+        "back": "γ represents the causal effect of the omitted variable (Z) on the dependent variable (Y). If γ is zero, the omitted variable does not determine Y, and there is no bias even if Z is correlated with X.",
+        "tags": [
+            "Internal Validity",
+            "OVB",
+            "Math"
+        ]
+    },
+    {
+        "front": "Scenario: You regress earnings on preschool attendance. If wealthy parents (Z) are more likely to send kids to preschool (X) and wealth also increases future earnings (Y), what is the sign of the bias?",
+        "back": "The bias is positive (+). \n1. Cov(Preschool, Wealth) > 0 (Positive correlation)\n2. γ > 0 (Wealth increases earnings)\nResult: (+) × (+) = (+). The OLS estimator will overstate the benefits of preschool.",
+        "tags": [
+            "Internal Validity",
+            "OVB",
+            "Application"
+        ]
+    },
+    {
+        "front": "Why is 'X measured with error' considered a more serious threat than 'Y measured with error'?",
+        "back": "Error in Y just adds to the overall noise (higher variance) but keeps the estimate unbiased. Error in X, however, correlates the regressor with the error term, causing 'attenuation bias' where the estimated coefficient is consistently pushed toward zero.",
+        "tags": [
+            "Internal Validity",
+            "Errors-in-Variables",
+            "Bias"
+        ]
+    },
+    {
+        "front": "How can Instrumental Variable (IV) regression help solve Internal Validity threats?",
+        "back": "IV regression can be used to solve Omitted Variable Bias, Errors-in-Variables, and Simultaneous Causality by using a variable (the instrument) that is correlated with X but has no independent effect on Y except through X.",
+        "tags": [
+            "Internal Validity",
+            "Solutions",
+            "IV Regression"
+        ]
+    },
+    {
+        "front": "In a Linear-Log model (Yi = β0 + β1 ln(Xi) + ui), how do you interpret β1?",
+        "back": "A 1% increase in X is associated with a change in Y of 0.01 × β1 units. (Y is in units, X is in percent).",
+        "tags": [
+            "Non-linear Models",
+            "Logarithms",
+            "Interpretation"
+        ]
+    },
+    {
+        "front": "In a Log-Linear model (ln(Yi) = β0 + β1 Xi + ui), how do you interpret β1?",
+        "back": "A 1 unit increase in X is associated with a (100 × β1)% change in Y. (Y is in percent, X is in units).",
+        "tags": [
+            "Non-linear Models",
+            "Logarithms",
+            "Interpretation"
+        ]
+    },
+    {
+        "front": "In a quadratic model (Y = β0 + β1X + β2X²), why is the 'marginal effect' not just a single number?",
+        "back": "Because the slope depends on the value of X. The marginal effect (the derivative) is β1 + 2β2X. As X changes, the impact of a one-unit increase in X also changes.",
+        "tags": [
+            "Non-linear Models",
+            "Polynomials",
+            "Marginal Effect"
+        ]
+    },
+    {
+        "front": "How do you interpret the coefficient β3 in the interaction model: Income = β0 + β1FirmSize + β2Education + β3(FirmSize × Education)?",
+        "back": "β3 represents how much the effect of firm size on income increases (or decreases) for every additional year of education attained.",
+        "tags": [
+            "Non-linear Models",
+            "Interaction Terms",
+            "Interpretation"
+        ]
+    },
+    {
+        "front": "Explain 'Sample Selection Bias' using the Diet Program example.",
+        "back": "If you only study people who *finished* a 6-month diet, you lose data on those who quit. People usually quit because the diet isn't working. By only looking at 'survivors,' your data is correlated with success, leading β̂1 to overstate the diet's effectiveness.",
+        "tags": [
+            "Internal Validity",
+            "Sample Selection",
+            "Example"
+        ]
+    },
+    {
+        "front": "Explain 'Simultaneous Causality' using the Smoking and Mental Health example.",
+        "back": "While smoking (X) may cause poor mental health (Y), high stress/poor mental health (Y) also causes people to smoke more (X). Because the causality runs both ways, OLS cannot distinguish the effect of X on Y from the effect of Y on X, resulting in a biased β̂.",
+        "tags": [
+            "Internal Validity",
+            "Simultaneous Causality",
+            "Example"
+        ]
+    },
+    {
+        "front": "What is 'Internal Validity' versus 'External Validity'?",
+        "back": "Internal Validity: Are the statistical inferences about causal effects valid for the specific population being studied? \nExternal Validity: Can these results be generalized to other populations and settings?",
+        "tags": [
+            "Validity",
+            "Definitions"
+        ]
+    },
+    {
+        "front": "What are the two specific sources of threats to External Validity?",
+        "back": "1. Differences in Population (e.g., study on students vs. the general workforce).\n2. Differences in Setting (e.g., study in a lab vs. real world, or under different legal/institutional rules).",
+        "tags": [
+            "External Validity",
+            "Threats"
+        ]
+    },
+    {
+        "front": "How do you test the joint hypothesis that two variables have no effect on the dependent variable?",
+        "back": "Set H0: β1 = 0 AND β2 = 0. Use an F-test to compute an F-statistic. If the F-statistic is greater than the critical value (or p-value < alpha), reject the null.",
+        "tags": [
+            "Multiple Regression",
+            "Hypothesis Testing",
+            "F-test"
+        ]
+    },
+    {
+        "front": "Why does the text mention that β1 is measured in 'shares' when discussing log transformations?",
+        "back": "In log models, the math involves small changes in ln(X) approximating percentage changes. To convert these decimal 'shares' into readable percentages (e.g., 0.05 to 5%), we multiply the coefficient or the change by 100.",
+        "tags": [
+            "Non-linear Models",
+            "Logarithms",
+            "Math"
+        ]
+    }
+]

@@ -26,10 +26,10 @@ export function Settings({ currentDeck, onResetCurrentDeckScores, onClearAllData
             {currentDeck ? (
               <>
                 <p className="text-sm text-gray-500 mb-3">
-                  This will reset correct/incorrect counts for all tags in the deck: "{currentDeck.name}".
+                  This will reset correct/incorrect counts for all tags in the deck: &quot;{currentDeck.name}&quot;.
                 </p>
                 <Button onClick={onResetCurrentDeckScores} variant="destructive">
-                  Reset Scores for "{currentDeck.name}"
+                  Reset Scores for &quot;{currentDeck.name}&quot;
                 </Button>
               </>
             ) : (
@@ -47,7 +47,7 @@ export function Settings({ currentDeck, onResetCurrentDeckScores, onClearAllData
           </CardHeader>
           <CardContent>
             <p className="text-sm text-red-600 mb-3">
-              This will permanently delete ALL decks and ALL progress from your browser's storage.
+              This will permanently delete ALL decks and ALL progress from your browser&apos;s storage.
             </p>
             <AlertDialog>
               <AlertDialogTrigger asChild>

@@ -1,0 +1,166 @@
+[
+    {
+        "front": "What are the four Least Square Assumptions for Multiple Regression?",
+        "back": "1. E(u|X1, ..., Xk) = 0\n2. (X1i, ..., Xki, Yi) are i.i.d.\n3. Large outliers are rare (finite fourth moments)\n4. There is no perfect multicollinearity",
+        "tags": [
+            "OLS",
+            "Assumptions",
+            "Multiple Regression"
+        ]
+    },
+    {
+        "front": "Define Average Treatment Effect (ATE) and Average Treatment Effect on the Treated (ATT).",
+        "back": "ATE = E[Y1i - Y0i]\nATT = E[Y1i - Y0i | Di = 1]",
+        "tags": [
+            "Causal Inference",
+            "ATE",
+            "ATT"
+        ]
+    },
+    {
+        "front": "In an RCT, why are ATE and ATT equal to the observed difference in means?",
+        "back": "Because treatment assignment (Di) is independent of potential outcomes (Y1i, Y0i), making selection bias equal to zero.",
+        "tags": [
+            "RCT",
+            "Causal Inference",
+            "Selection Bias"
+        ]
+    },
+    {
+        "front": "How do you interpret the coefficient of a dummy variable in a multiple regression?",
+        "back": "It is the difference in the expected value of Y between the category (X=1) and the omitted/reference group (X=0), holding other regressors constant.",
+        "tags": [
+            "Multiple Regression",
+            "Dummy Variables"
+        ]
+    },
+    {
+        "front": "What is the 'Dummy Variable Trap' and how is it resolved?",
+        "back": "It is a case of perfect multicollinearity occurring when all categories of a mutually exclusive and exhaustive set are included alongside an intercept. Solution: Exclude one category (the reference group) or exclude the intercept.",
+        "tags": [
+            "Multicollinearity",
+            "Dummy Variables"
+        ]
+    },
+    {
+        "front": "What is the primary consequence of imperfect multicollinearity?",
+        "back": "It does not violate OLS assumptions, but it increases the standard errors of the estimated coefficients, making them less precise.",
+        "tags": [
+            "Multicollinearity",
+            "Standard Errors"
+        ]
+    },
+    {
+        "front": "In joint hypothesis testing, what does 'q' represent?",
+        "back": "The number of restrictions being tested (the number of equal signs in the null hypothesis).",
+        "tags": [
+            "Hypothesis Testing",
+            "F-statistic"
+        ]
+    },
+    {
+        "front": "How do you interpret a change in a variable in log form (e.g., ln(X) increases by 0.01)?",
+        "back": "A 0.01 increase in ln(X) is approximately equal to a 1% increase in X.",
+        "tags": [
+            "Non-linear Models",
+            "Logarithms"
+        ]
+    },
+    {
+        "front": "In a log-log model (ln(Yi) = β0 + β1 ln(Xi) + ui), how is β1 interpreted?",
+        "back": "A 1% increase in X is associated with a β1% increase in Y (β1 is the elasticity of Y with respect to X).",
+        "tags": [
+            "Non-linear Models",
+            "Logarithms",
+            "Elasticity"
+        ]
+    },
+    {
+        "front": "How do you test for linearity in a polynomial regression (e.g., wage = β0 + β1Edu + β2Age + β3Age^2)?",
+        "back": "Test the null hypothesis H0: β3 = 0. If rejected, the relationship is non-linear (specifically quadratic).",
+        "tags": [
+            "Non-linear Models",
+            "Polynomials"
+        ]
+    },
+    {
+        "front": "What is the interpretation of the interaction term coefficient (β3) in: Income = β0 + β1Male + β2Age + β3(Male × Age)?",
+        "back": "It represents how the effect of Age on Income differs between men and women (the difference in slopes).",
+        "tags": [
+            "Non-linear Models",
+            "Interaction Terms"
+        ]
+    },
+    {
+        "front": "What are the two conditions required for Omitted Variable Bias (OVB) to occur?",
+        "back": "1. The omitted variable (Z) is correlated with the included regressor (X).\n2. The omitted variable (Z) is a determinant of the dependent variable (Y).",
+        "tags": [
+            "Internal Validity",
+            "OVB"
+        ]
+    },
+    {
+        "front": "Which OLS assumption is violated by Omitted Variable Bias?",
+        "back": "Assumption 1: E[ui | Xi] = 0 (The conditional mean of the error term given the regressors is non-zero).",
+        "tags": [
+            "Internal Validity",
+            "OVB",
+            "Assumptions"
+        ]
+    },
+    {
+        "front": "How is the sign of Omitted Variable Bias determined?",
+        "back": "By the product of the sign of the correlation between X and Z and the sign of the effect of Z on Y (γ).",
+        "tags": [
+            "Internal Validity",
+            "OVB"
+        ]
+    },
+    {
+        "front": "What is the effect on the OLS estimator if the regressor X is measured with error?",
+        "back": "β1 is biased and inconsistent; specifically, it is biased towards zero (attenuation bias).",
+        "tags": [
+            "Internal Validity",
+            "Errors-in-Variables"
+        ]
+    },
+    {
+        "front": "What is the effect on the OLS estimator if the dependent variable Y is measured with error?",
+        "back": "The estimator remains unbiased and consistent, provided the measurement error is uncorrelated with the regressors.",
+        "tags": [
+            "Internal Validity",
+            "Errors-in-Variables"
+        ]
+    },
+    {
+        "front": "When does Sample Selection Bias arise?",
+        "back": "When a selection process influences the availability of data and that process is related to the dependent variable (Y).",
+        "tags": [
+            "Internal Validity",
+            "Sample Selection"
+        ]
+    },
+    {
+        "front": "Define Simultaneous Causality.",
+        "back": "A situation where X causes Y, but Y also causes X, leading to correlation between the regressor and the error term.",
+        "tags": [
+            "Internal Validity",
+            "Simultaneous Causality"
+        ]
+    },
+    {
+        "front": "What are the two main sources of threats to External Validity?",
+        "back": "1. Differences in Population (e.g., animal vs. human, college grads vs. general public).\n2. Differences in Setting (e.g., different laws, institutional environments, or physical settings).",
+        "tags": [
+            "External Validity"
+        ]
+    },
+    {
+        "front": "What is the difference between Heteroskedasticity and Homoskedasticity?",
+        "back": "Homoskedasticity means the variance of the error term u is constant for all X; Heteroskedasticity means the variance of u depends on X.",
+        "tags": [
+            "OLS",
+            "Heteroskedasticity"
+        ]
+    }
+]

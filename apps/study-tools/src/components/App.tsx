@@ -1,6 +1,6 @@
 "use client";
 
-import type { Card, TagScore, TagScores, Deck, AllDecks, View } from "@types";
+import type { Card, TagScore, TagScores, Deck, AllDecks, View } from "@/types";
 import { useFlashcardPersistence } from "@/hooks/useFlashcardPersistence";
 import { useDeckManagement } from "@/hooks/useDeckManagement";
 
@@ -60,7 +60,7 @@ const FlashcardApp: NextPage = () => {
   const tagScores = useMemo(() => currentDeck?.tagScores ?? {}, [currentDeck]);
   const deckName = useMemo(
     () => currentDeck?.name ?? "No Deck Selected",
-    [currentDeck]
+    [currentDeck],
   );
 
   // --- Shuffling Logic ---
@@ -71,7 +71,7 @@ const FlashcardApp: NextPage = () => {
       if (total === 0) return 0.5;
       return score.correct / total;
     },
-    [tagScores]
+    [tagScores],
   );
 
   const getCardWeakness = useCallback(
@@ -80,7 +80,7 @@ const FlashcardApp: NextPage = () => {
       const performances = card.tags.map(getTagPerformance);
       return Math.min(...performances);
     },
-    [getTagPerformance]
+    [getTagPerformance],
   );
 
   const shuffleDeck = useCallback(() => {
@@ -106,11 +106,12 @@ const FlashcardApp: NextPage = () => {
     setIsFlipped(false);
     console.log(
       "Shuffled. Weakest first based on tags:",
-      indices.map((i) => cards[i]?.front ?? "N/A")
+      indices.map((i) => cards[i]?.front ?? "N/A"),
     );
   }, [cards, getCardWeakness]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     shuffleDeck();
   }, [selectedDeckId, cards, shuffleDeck]);
 
@@ -157,7 +158,7 @@ const FlashcardApp: NextPage = () => {
     if (shuffledIndices.length === 0) return;
     setIsFlipped(false);
     setCurrentShuffledIndex(
-      (prev) => (prev - 1 + shuffledIndices.length) % shuffledIndices.length
+      (prev) => (prev - 1 + shuffledIndices.length) % shuffledIndices.length,
     );
   };
 
@@ -200,7 +201,7 @@ const FlashcardApp: NextPage = () => {
     if (!selectedDeckId || !currentDeck) return;
     if (
       window.confirm(
-        `Are you sure you want to reset all tag scores for the deck "${deckName}"?`
+        `Are you sure you want to reset all tag scores for the deck "${deckName}"?`,
       )
     ) {
       setAllDecks((prevAllDecks) => {
@@ -216,7 +217,7 @@ const FlashcardApp: NextPage = () => {
   const clearAllData = () => {
     if (
       window.confirm(
-        "DELETE ALL DATA?\n\nAre you sure you want to clear all decks and scores? This cannot be undone."
+        "DELETE ALL DATA?\n\nAre you sure you want to clear all decks and scores? This cannot be undone.",
       )
     ) {
       setAllDecks({});

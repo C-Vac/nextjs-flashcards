@@ -2,7 +2,7 @@
 
 import { Button } from "./button";
 import { Badge } from "./badge";
-import type { View, Deck } from "apps/study-tools/src/types";
+import type { View, Deck } from "@/types";
 
 interface HeaderProps {
   view: View;

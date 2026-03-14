@@ -1,6 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  crossOrigin: "anonymous",
+  allowedDevOrigins: [
+    "http://goblian.lan",
+    "https://goblian.lan",
+    "http://localhost:3000",
+    "https://localhost:3000",
+  ],
+  trailingSlash: true,
+  basePath: "",
   async rewrites() {
     return [
       {

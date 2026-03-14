@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback } from "react";
-import { AllDecks, Deck, Card, View } from "apps/study-tools/src/types";
+import { AllDecks, Deck, Card, View } from "@/types";
 
 interface DeckFile {
   filename: string;
@@ -61,7 +61,7 @@ export const useDeckManagement = ({
             parsedCards.some((c) => !c.front || !c.back)
           ) {
             throw new Error(
-              "Invalid JSON format. Expected an array of objects with 'front' and 'back' properties."
+              "Invalid JSON format. Expected an array of objects with 'front' and 'back' properties.",
             );
           }
 
@@ -87,14 +87,14 @@ export const useDeckManagement = ({
           setSelectedDeckId(newDeckId); // Select the newly uploaded deck
           setView("viewer"); // Switch back to viewer
           alert(
-            `Deck "${newDeckName}" uploaded successfully with ${validatedCards.length} cards!`
+            `Deck "${newDeckName}" uploaded successfully with ${validatedCards.length} cards!`,
           );
         } catch (error) {
           console.error("Error processing JSON file:", error);
           alert(
             `Error uploading file: ${
               error instanceof Error ? error.message : "Unknown error"
-            }`
+            }`,
           );
         } finally {
           // Reset file input value to allow uploading the same file again
@@ -111,7 +111,7 @@ export const useDeckManagement = ({
       };
       reader.readAsText(file);
     },
-    [allDecks, generateDeckId, setAllDecks, setSelectedDeckId, setView]
+    [allDecks, generateDeckId, setAllDecks, setSelectedDeckId, setView],
   );
 
   const handleSelectDeck = useCallback(
@@ -122,7 +122,7 @@ export const useDeckManagement = ({
         // Shuffle will be triggered by useEffect dependency change
       }
     },
-    [allDecks, setSelectedDeckId, setView]
+    [allDecks, setSelectedDeckId, setView],
   );
 
   const handleDeleteDeck = useCallback(
@@ -131,7 +131,7 @@ export const useDeckManagement = ({
       const deckToDeleteName = allDecks[deckId].name;
       if (
         window.confirm(
-          `Are you sure you want to delete the deck "${deckToDeleteName}"? This cannot be undone.`
+          `Are you sure you want to delete the deck "${deckToDeleteName}"? This cannot be undone.`,
         )
       ) {
         setAllDecks((prev) => {
@@ -142,14 +142,14 @@ export const useDeckManagement = ({
         // If the deleted deck was selected, select another one or null
         if (selectedDeckId === deckId) {
           const remainingIds = Object.keys(allDecks).filter(
-            (id) => id !== deckId
+            (id) => id !== deckId,
           );
           setSelectedDeckId(remainingIds[0] || null);
           // If no decks left, viewer will show "No Deck Selected"
         }
       }
     },
-    [allDecks, selectedDeckId, setAllDecks, setSelectedDeckId]
+    [allDecks, selectedDeckId, setAllDecks, setSelectedDeckId],
   );
 
   const handleDeckNameEdit = useCallback(
@@ -157,7 +157,7 @@ export const useDeckManagement = ({
       setTempDeckName(allDecks[deckId]?.name ?? "");
       setEditingDeckId(deckId);
     },
-    [allDecks]
+    [allDecks],
   );
 
   const handleDeckNameSave = useCallback(() => {
@@ -213,7 +213,7 @@ export const useDeckManagement = ({
           // Check if deck already exists
           const deckName = filename.replace(/\.[^/.]+$/, "");
           const existingDeckId = Object.keys(allDecks).find(
-            (id) => allDecks[id].name === deckName
+            (id) => allDecks[id].name === deckName,
           );
           if (existingDeckId) {
             console.log(`Deck "${deckName}" already exists, skipping.`);

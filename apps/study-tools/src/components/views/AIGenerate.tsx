@@ -11,6 +11,7 @@ const AIGenerate = ({ onSetView }: { onSetView: (view: View) => void }) => {
   const [textInput, setTextInput] = useState("");
   const [topicInput, setTopicInput] = useState("");
   const [loading, setLoading] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [generatedCards, setGeneratedCards] = useState<any[]>([]);
 
   const handleGenerateFromText = async () => {

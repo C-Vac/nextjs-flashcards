@@ -4,7 +4,7 @@ This document outlines the architecture, setup, and development guidelines for t
 
 ## 1. Project Overview
 
-The Study Tools Monorepo is a web-based application designed to help users learn and memorize information through flashcards and other study applets. It supports deck management, tag-based scoring, adaptive shuffling, and AI-powered flashcard generation. The project integrates a Next.js frontend with a Node.js/Express AI backend using Ollama for LLM interactions, aiming for dynamic content generation, personalized learning paths, and intuitive user interactions.
+Study Tools is a web-based application designed to help users learn and memorize information through flashcards and other study applets. It supports deck management, tag-based scoring, adaptive shuffling, and AI-powered flashcard generation. The project integrates a Next.js frontend with a Node.js/Express AI backend using Ollama for LLM interactions, aiming for dynamic content generation, personalized learning paths, and intuitive user interactions.
 
 ## 2. Architectural Overview
 

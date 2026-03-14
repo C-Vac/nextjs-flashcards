@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { AllDecks, Deck, Card } from "apps/study-tools/src/types";
+import { AllDecks, Deck, Card } from "@/types";
 
 // --- LocalStorage Keys ---
 const LS_ALL_DECKS_KEY = "flashcard_allDecks";
@@ -114,7 +114,9 @@ export const useFlashcardPersistence = (): UseFlashcardPersistenceResult => {
       loadedSelectedId = Object.keys(loadedDecks)[0] || null;
     }
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setAllDecks(loadedDecks);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setSelectedDeckId(loadedSelectedId);
   }, []);
 
