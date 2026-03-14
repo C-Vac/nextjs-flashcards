@@ -229,8 +229,8 @@ const FlashcardApp: NextPage = () => {
 
   // --- Render ---
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800 p-4 sm:p-6 lg:p-8 font-sans">
-      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6">
+    <div className="min-h-screen bg-[#FDFDFD] text-gray-800 p-4 sm:p-6 lg:p-8 font-sans selection:bg-indigo-100">
+      <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 p-6 sm:p-10 transition-all duration-300">
         <Header view={view} currentDeck={currentDeck} onSetView={setView} />
 
         {view === "viewer" && (
@@ -286,8 +286,8 @@ const FlashcardApp: NextPage = () => {
         {view === "ai_generate" && <AIGenerate onSetView={(v) => setView(v)} />}
       </div>
 
-      <footer className="text-center text-xs text-gray-400 mt-6">
-        Flashcard App - Data stored in browser localStorage.
+      <footer className="text-center text-xs text-gray-400 mt-8 mb-4">
+        Study Tools &copy; {new Date().getFullYear()} - Data is stored locally in your browser
       </footer>
     </div>
   );
