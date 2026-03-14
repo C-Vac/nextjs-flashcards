@@ -116,7 +116,7 @@ export const useFlashcardPersistence = (): UseFlashcardPersistenceResult => {
 
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setAllDecks(loadedDecks);
-    // eslint-disable-next-line react-hooks/set-state-in-effect
+     
     setSelectedDeckId(loadedSelectedId);
   }, []);
 
